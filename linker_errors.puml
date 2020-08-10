@@ -1,0 +1,18 @@
+@startmindmap
+title Fixing Linker Errors
+
+* Linker Error
+** Can't find header file
+*** Look at include paths
+** Symbol undefined
+*** Check if header included
+*** Check if source compiled or library included
+** Parent makefile doesn't include subfolder
+** Dependency needs to be built in order
+*** Linker order matters, if B depends on A, you need A built first
+*** Look at order of subdirectory building in Makefile
+** Merging between branches
+*** Odds are, if you don't see this error when building on the child branch, you are missing files from the merge
+** No rule to make target (library.a)
+*** the target (e.g. anacapad) needs the library, so look in the Makefile
+@enduml

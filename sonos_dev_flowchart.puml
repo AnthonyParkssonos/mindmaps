@@ -1,0 +1,16 @@
+@startmindmap
+
+title Sonos Development Guide
+
+* What do I need to do?
+** Integrate a third party library
+*** Create a tar.xz
+**** tar cfJ myfile.tar.xz myfolder/
+*** Install artifact locally
+**** artifact-cache install -g org.xiph -a libflac -v 1.3.1 -f flac-1.3.1.tar.xz
+*** Publish (deploy) artifact
+**** artifact-cache deploy -g org.xiph -a libflac -v 1.3.1 -f flac-1.3.1.tar.xz
+*** Modify Makefile to link new library
+*** Is new library dynamically linked?
+**** Edit manifest.xml
+@endmindmap
